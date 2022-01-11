@@ -69,7 +69,6 @@ export default defineComponent({
       centerDialogVisible.value = false
       if (Object.keys(props.defaultInfo).length) {
         //编辑
-        console.log('编辑用户')
         store.dispatch('system/editPageDataAction', {
           pageName: props.pageName,
           queryInfo: { ...formData.value, ...props.otherInfo },
@@ -77,7 +76,6 @@ export default defineComponent({
         })
       } else {
         //新建
-        console.log('新建用户')
         store.dispatch('system/createPageDataAction', {
           pageName: props.pageName,
           queryInfo: { ...formData.value, ...props.otherInfo }

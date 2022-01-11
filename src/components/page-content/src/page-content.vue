@@ -103,7 +103,6 @@ export default defineComponent({
     })
     const store = useStore()
     const getPageData = (queryInfo: any = {}) => {
-      console.log('查询权限:', !isQuery)
       if (!isQuery) return
       store.dispatch('system/getPageListAction', {
         pageName: props.pageName,
@@ -133,7 +132,6 @@ export default defineComponent({
 
     //5.点击删除按钮
     const handlerDeleteClick = (item: any) => {
-      console.log(item)
       store.dispatch('system/deletePageDataAction', {
         pageName: props.pageName,
         id: item.id

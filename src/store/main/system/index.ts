@@ -169,6 +169,7 @@ const systemModule: Module<ISystemType, IRootState> = {
       //1.创建数据的请求
       const { pageName, queryInfo } = payload
       const url = `/${pageName}`
+      console.log('新建url:', url)
       await createPageDataById(url, queryInfo)
 
       //2.请求最新的数据
@@ -185,6 +186,7 @@ const systemModule: Module<ISystemType, IRootState> = {
       //1.编辑数据的请求
       const { pageName, queryInfo, id } = payload
       const url = `/${pageName}/${id}`
+      console.log('编辑url:', url)
       await editPageDataById(url, queryInfo)
 
       //2.请求最新的数据
