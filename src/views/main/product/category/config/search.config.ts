@@ -4,9 +4,10 @@ export const searchConfig: IForm = {
   formItems: [
     {
       field: 'name',
-      type: 'input',
+      type: 'select',
       label: '部门名称',
-      placeholder: '请输入商品类别'
+      placeholder: '请输入商品类别',
+      options: []
     }
   ],
   labWidth: '100px',
