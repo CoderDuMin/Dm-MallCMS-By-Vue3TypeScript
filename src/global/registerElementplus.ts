@@ -34,7 +34,8 @@ import {
   ElImage,
   ElDialog,
   ElTree,
-  ElCard
+  ElCard,
+  ElTooltip
 } from 'element-plus/lib'
 import * as ElIconModules from '@element-plus/icons-vue'
 
@@ -73,7 +74,8 @@ const components = [
   ElImage,
   ElDialog,
   ElTree,
-  ElCard
+  ElCard,
+  ElTooltip
 ]
 
 export default function (app: App): void {

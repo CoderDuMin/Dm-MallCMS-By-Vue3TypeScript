@@ -8,24 +8,28 @@ enum DashboardAPI {
 }
 export function getCateGoodsCountData() {
   return DmRequest.get({
-    url: DashboardAPI.categoryGoodsCount
+    url: DashboardAPI.categoryGoodsCount,
+    showLoading: false
   })
 }
 
 export function getCateGoodsFavorData() {
   return DmRequest.get({
-    url: DashboardAPI.categoryGoodsFavor
+    url: DashboardAPI.categoryGoodsFavor,
+    showLoading: false
   })
 }
 
 export function getCateGoodsSaleData() {
   return DmRequest.get({
-    url: DashboardAPI.categoryGoodsSale
+    url: DashboardAPI.categoryGoodsSale,
+    showLoading: false
   })
 }
 
 export function getAdressGoodsSaleData() {
   return DmRequest.get({
-    url: DashboardAPI.addressGoodsSale
+    url: DashboardAPI.addressGoodsSale,
+    showLoading: false
   })
 }
