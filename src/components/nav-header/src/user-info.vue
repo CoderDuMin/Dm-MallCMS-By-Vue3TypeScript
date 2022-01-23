@@ -7,8 +7,10 @@
       <span class="user-name">{{ name }}</span>
     </div>
     <template #dropdown>
-      <el-dropdown-menu>
-        <el-dropdown-item :icon="Plus">Action 1</el-dropdown-item>
+      <el-dropdown-menu
+        ><el-dropdown-item :icon="Plus" @click="handleLogOut">
+          退出登录
+        </el-dropdown-item>
         <el-dropdown-item :icon="CirclePlusFilled"> Action 2 </el-dropdown-item>
         <el-dropdown-item :icon="CirclePlus">Action 3</el-dropdown-item>
         <el-dropdown-item :icon="Check">Action 4</el-dropdown-item>
@@ -21,12 +23,18 @@
 <script lang="ts">
 import { defineComponent, computed } from 'vue'
 import { useStore } from '@/store'
+import router from '@/router'
 export default defineComponent({
   setup() {
+    const handleLogOut = () => {
+      window.localStorage.removeItem('token')
+      router.push('dashboard')
+    }
     const store = useStore()
     const name = computed(() => store.state.login.userinfo.name)
     return {
-      name
+      name,
+      handleLogOut
     }
   }
 })
