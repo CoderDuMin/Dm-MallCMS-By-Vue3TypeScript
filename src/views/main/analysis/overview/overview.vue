@@ -82,12 +82,7 @@ import { defineComponent } from 'vue'
 import DmCard from '@/base-ui/card'
 import DmDescriptions from '@/base-ui/descriptions'
 import DmTextLink from '@/base-ui/text-link'
-import {
-  technologyStacks,
-  dependencies,
-  devDependencies,
-  projectDir
-} from './config'
+import { technologyStacks, dependencies, devDependencies } from './config'
 export default defineComponent({
   name: 'overview',
   components: {
@@ -96,7 +91,7 @@ export default defineComponent({
     DmTextLink
   },
   setup() {
-    return { technologyStacks, dependencies, devDependencies, projectDir }
+    return { technologyStacks, dependencies, devDependencies }
   }
 })
 </script>
