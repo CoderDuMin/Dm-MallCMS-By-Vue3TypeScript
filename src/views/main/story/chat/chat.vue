@@ -1,18 +1,29 @@
 <template>
   <div class="chat">
-    <h2>chat</h2>
+    <dm-editor v-model:value="htmlString"></dm-editor>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
+import DmEditor from '@/base-ui/editor'
 
 export default defineComponent({
   name: 'chat',
+  components: {
+    DmEditor
+  },
   setup() {
-    return {}
+    const htmlString = ref<string>('xxhh')
+    return {
+      htmlString
+    }
   }
 })
 </script>
 
-<style scoped></style>
+<style scoped lang="less">
+.chat {
+  margin-top: 15px;
+}
+</style>
